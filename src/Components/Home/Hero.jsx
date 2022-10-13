@@ -15,6 +15,28 @@ function Hero() {
 				<SiteNav />
 				{/* call to action */}
 				<div className="col-12 col-md-6 h-100">
+					<div className="position-relative top-50 start-50 translate-middle text-center d-block d-md-none">
+						<img
+							src={blob1}
+							alt="..."
+							className="position-absolute top-50 start-50 translate-middle w-100"
+						/>
+						<img
+							src={blob}
+							alt="..."
+							className="position-absolute top-50 start-50 translate-middle w-100"
+						/>
+						<img
+							src={blob2}
+							alt="..."
+							className="position-absolute top-50 start-50 translate-middle w-100"
+						/>
+						<img
+							src={phone}
+							alt="..."
+							className="position-absolute top-50 start-50 translate-middle w-75"
+						/>
+					</div>
 					<div className="position-relative top-50 start-50 translate-middle text-center">
 						<p className="display-1 text-center title">SBWL</p>
 						<p
@@ -31,7 +53,7 @@ function Hero() {
 						</a>
 					</div>
 				</div>
-				<div className="col-12 col-md-6 h-100 position-relative">
+				<div className="col-12 col-md-6 h-100 position-relative d-none d-md-block">
 					<img
 						src={blob1}
 						alt="..."
