@@ -1,0 +1,4 @@
+<?xml version="1.0" standalone="no"?>
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none" style="outline: 5px solid red !important;">
+  <path fill="rgba(0,0,0,0.1)" stoke="#cfb48b" stroke-width="4" d="M29.7,-33.5C37.5,-22,42,-11,45.4,3.5C48.9,17.9,51.3,35.8,43.6,50C35.8,64.1,17.9,74.5,3.3,71.2C-11.4,68,-22.8,51.1,-30.8,37C-38.8,22.8,-43.4,11.4,-41.3,2.1C-39.3,-7.3,-30.6,-14.6,-22.6,-26.1C-14.6,-37.6,-7.3,-53.4,1.9,-55.2C11,-57.1,22,-45,29.7,-33.5Z" transform="translate(100 100)" />
+</svg>
