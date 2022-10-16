@@ -11,18 +11,29 @@ function Fibre() {
 				<div className="col-12">
 					<p className="display-1 title">Fibre</p>
 				</div>
+				{/* Desktop Version */}
 				<div className="col-12 col-md-4">
 					<div className="position-relative h-100">
-						<img
-							src={oct}
-							alt="..."
-							className="position-absolute top-50 start-50 translate-middle w-100"
-						/>
-						<img
-							src={Vuma}
-							alt="..."
-							className="position-absolute top-50 start-50 translate-middle w-75"
-						/>
+						<div className=" d-none d-md-block">
+							<img
+								src={oct}
+								alt="..."
+								className="position-absolute top-50 start-50 translate-middle w-100"
+							/>
+							<img
+								src={Vuma}
+								alt="..."
+								className="position-absolute top-50 start-50 translate-middle w-75"
+							/>
+						</div>
+						<div className=" d-block d-md-none">
+							<img src={oct} alt="..." className="" />
+							<img
+								src={Vuma}
+								alt="..."
+								className="position-absolute top-50 start-50 translate-middle w-75"
+							/>
+						</div>
 					</div>
 				</div>
 				<div className="col-12 col-md-4 text-center position-relative">
@@ -42,16 +53,26 @@ function Fibre() {
 					</a>
 				</div>
 				<div className="col-12 col-md-4 position-relative">
-					<img
-						src={oct}
-						alt="..."
-						className="position-absolute top-50 start-50 translate-middle w-100"
-					/>
-					<img
-						src={Metro}
-						alt="..."
-						className="position-absolute top-50 start-50 translate-middle w-75"
-					/>
+					<div className=" d-none d-md-block">
+						<img
+							src={oct}
+							alt="..."
+							className="position-absolute top-50 start-50 translate-middle w-100"
+						/>
+						<img
+							src={Metro}
+							alt="..."
+							className="position-absolute top-50 start-50 translate-middle w-75"
+						/>
+					</div>
+					<div className="d-block d-md-none">
+						<img src={oct} alt="..." className="" />
+						<img
+							src={Metro}
+							alt="..."
+							className="position-absolute top-50 start-50 translate-middle w-75"
+						/>
+					</div>
 				</div>
 				<div className="col-12 d-block d-md-none text-center">
 					<a

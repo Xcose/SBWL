@@ -12,12 +12,22 @@ function Lte() {
 					<div className="row">
 						<div className="col-12 col-md-4">
 							<p className="display-1 title">LTE</p>
-							<div className="position-relative align-middle h-75">
+							{/* Desktop version */}
+							<div className="position-relative align-middle h-75 d-none d-md-block">
 								<img
 									src={oct}
 									alt="..."
 									className="position-absolute top-50 start-50 translate-middle w-100"
 								/>
+								<img
+									src={laptop}
+									alt="..."
+									className="position-absolute top-50 start-50 translate-middle w-100"
+								/>
+							</div>
+							{/* mobile version */}
+							<div className="d-block d-md-none position-relative ">
+								<img src={oct} alt="..." className="" />
 								<img
 									src={laptop}
 									alt="..."
