@@ -1,7 +1,5 @@
 import React from "react";
 import SiteNav from "../../Shared/navbar";
-import BGI from "../../images/adrien-olichon-ilVYjf0J378-unsplash.jpg";
-import redSquare from "../../images/XM.svg";
 import phone from "../../images/kindpng_699290.png";
 import blob from "../../images/blob.svg";
 import blob1 from "../../images/blob(2).svg";

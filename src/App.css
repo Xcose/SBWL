@@ -1,12 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Commissioner&display=swap');
+body {
+  font-family: 'Commissioner', sans-serif !important;
+}
 .App {
   text-align: center;
 }
-#home {
+#home, .bg-lte-text, .btn-callToAction2, #contact {
   background-color: #762fcf !important;
 }
-.title {
+#fibre {
+  background-color: #9244f3 !important;
+}
+#lte {
+  background-color: #f44926 !important;
+}
+.title, .sub-title {
   font-family: 'Russo One', sans-serif;
+}
+.sub-title {
+  color: #f9b850;
+  font-weight: bold;
 }
 .btn-callToAction {
   background-color: #f44926 !important;
