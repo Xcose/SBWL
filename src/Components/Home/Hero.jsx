@@ -3,7 +3,7 @@ import SiteNav from "../../Shared/navbar";
 import phone from "../../images/kindpng_699290.png";
 import blob from "../../images/blob.svg";
 import blob1 from "../../images/blob(2).svg";
-import blob2 from "../../images/blob(4).svg";
+import blob2 from "../../images/blob(5).svg";
 
 function Hero() {
 	return (
