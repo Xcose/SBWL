@@ -26,7 +26,7 @@ const SiteNav = () => {
 					<img src={logo} alt="" width="35" height="35" />
 				</a>
 				<button
-					className="navbar-toggler"
+					className="navbar-toggler text-white"
 					type="button"
 					data-bs-toggle="collapse"
 					data-bs-target="#navbarNav"
