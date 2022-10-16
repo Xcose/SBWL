@@ -36,6 +36,11 @@ body {
   height: 40vmin;
   pointer-events: none;
 }
+.btn-callToAction, .btn-callToAction2, .oct {
+  box-shadow: -3px 18px 31px -8px rgba(0,0,0,0.69);
+-webkit-box-shadow: -3px 18px 31px -8px rgba(0,0,0,0.69);
+-moz-box-shadow: -3px 18px 31px -8px rgba(0,0,0,0.69);
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

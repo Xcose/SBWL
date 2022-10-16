@@ -37,7 +37,7 @@ function Lte() {
 						</div>
 						<div className="col-12 col-md-8">
 							<div className="col-12 col-md-8">
-								<div className="bg-lte-text rounded-2 p-2 m-4">
+								<div className="bg-lte-text rounded-2 p-2 m-4 p-md-4">
 									<p className="sub-title">Month-to-Month (No Contract)</p>
 									<p>
 										News write-ups offer a great way to let clients know about
@@ -46,7 +46,7 @@ function Lte() {
 								</div>
 							</div>
 							<div className="col-12 col-md-8 offset-md-4">
-								<div className="bg-lte-text rounded-2 p-2 m-4">
+								<div className="bg-lte-text rounded-2 p-2 m-4 p-md-4">
 									<p className="sub-title">One month role over</p>
 									<p>
 										News write-ups offer a great way to let clients know about
@@ -55,7 +55,7 @@ function Lte() {
 								</div>
 							</div>
 							<div className="col-12 col-md-8">
-								<div className="bg-lte-text rounded-2 p-2 m-4">
+								<div className="bg-lte-text rounded-2 p-2 m-4 p-md-4">
 									<p className="sub-title">No out-of-bundle data</p>
 									<p>
 										News write-ups offer a great way to let clients know about
@@ -64,7 +64,7 @@ function Lte() {
 								</div>
 							</div>
 							<div className="col-12 col-md-8 offset-md-4">
-								<div className="bg-lte-text rounded-2 p-2 m-4">
+								<div className="bg-lte-text rounded-2 p-2 m-4 p-md-4">
 									<p className="sub-title">
 										LTE ready, just insert simcard into device and you are ready
 									</p>

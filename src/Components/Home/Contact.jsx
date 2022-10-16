@@ -11,7 +11,12 @@ function Contact() {
 					<p className="sub-title fs-5">Email Address</p>
 					<p>info@sbwl.co..za</p>
 				</div>
-				<div className="col-12 col-md-4 p-5">Social Icons</div>
+				<div className="col-12 col-md-4 p-5">
+					<i className="bi-twitter mx-3" style={{ fontSize: "2rem" }}></i>
+					<i className="bi-facebook mx-3" style={{ fontSize: "2rem" }}></i>
+					<i className="bi-youtube mx-3" style={{ fontSize: "2rem" }}></i>
+					<i className="bi-instagram mx-3" style={{ fontSize: "2rem" }}></i>
+				</div>
 				<div className="col-12 col-md-4 p-5">
 					<div>
 						<p className="sub-title fs-5">Phone Number</p>
