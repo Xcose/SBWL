@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../images/Logo2.png";
+import { Link } from "react-router-dom";
 
 const SiteNav = () => {
 	const [isDark, setIsDark] = useState(false);
@@ -20,11 +21,14 @@ const SiteNav = () => {
 				isDark ? "bg-dark" : "bg-transparent"
 			} position-fixed w-100`}
 			id="siteNav"
+			style={{ zIndex: "10" }}
 		>
 			<div className="container">
-				<a className="navbar-brand text-white" href="#home">
-					<img src={logo} alt="" width="35" height="35" />
-				</a>
+				<Link to="/">
+					<a className="navbar-brand text-white" href="#home">
+						<img src={logo} alt="" width="35" height="35" />
+					</a>
+				</Link>
 				<button
 					className="navbar-toggler text-white"
 					type="button"
@@ -44,7 +48,7 @@ const SiteNav = () => {
 								aria-current="page"
 								href="#home"
 							>
-								SIGN UP
+								SIGN IN
 							</a>
 						</li>
 					</ul>

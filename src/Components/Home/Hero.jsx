@@ -8,9 +8,9 @@ import blob2 from "../../images/blob(5).svg";
 function Hero() {
 	return (
 		<div className="vh-100" id="home">
+			{/* navigation bar */}
+			<SiteNav />
 			<div className="h-100 text-white row">
-				{/* navigation bar */}
-				<SiteNav />
 				{/* call to action */}
 				<div className="col-12 col-md-6 h-100">
 					<div className="position-relative top-50 start-50 translate-middle text-center d-block d-md-none">
