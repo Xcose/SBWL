@@ -3,6 +3,7 @@ import oct from "../../images/Oct.svg";
 import Vuma from "../../images/vuma1.png";
 import Openserve from "../../images/os.png";
 import Metro from "../../images/metrofibre-networx-logo-2.png";
+import { Link } from "react-router-dom";
 
 function Fibre() {
 	return (
@@ -45,12 +46,14 @@ function Fibre() {
 							className="position-absolute top-50 start-50 translate-middle w-100"
 						/>
 					</div>
-					<a
-						href="#"
-						className="btn btn-lg btn-callToAction rounded-pill px-5 my-5 d-none d-md-block"
-					>
-						View Deals
-					</a>
+					<Link to="/fibre">
+						<a
+							href="#"
+							className="btn btn-lg btn-callToAction rounded-pill px-5 my-5 d-none d-md-block"
+						>
+							View Deals
+						</a>
+					</Link>
 				</div>
 				<div className="col-12 col-md-4 position-relative">
 					<div className=" d-none d-md-block">

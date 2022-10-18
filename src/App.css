@@ -9,7 +9,7 @@ body {
 #home, .bg-lte-text, .btn-callToAction2, #contact {
   background-color: #762fcf !important;
 }
-#fibre {
+#fibre, .fibre-section {
   background-color: #9244f3 !important;
 }
 #lte, .lte-section{
