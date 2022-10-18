@@ -79,10 +79,7 @@ function Lte() {
 						</div>
 						<div className="col-12 col-md-3 offset-md-5 text-center">
 							<Link to="/lte">
-								<div
-									href="#"
-									className="btn btn-lg btn-callToAction2 rounded-pill px-5 my-5 text-white"
-								>
+								<div className="btn btn-lg btn-callToAction2 rounded-pill px-5 my-5 text-white">
 									View Deals
 								</div>
 							</Link>

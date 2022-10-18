@@ -47,12 +47,9 @@ function Fibre() {
 						/>
 					</div>
 					<Link to="/fibre">
-						<a
-							href="#"
-							className="btn btn-lg btn-callToAction rounded-pill px-5 my-5 d-none d-md-block"
-						>
+						<div className="btn btn-lg btn-callToAction rounded-pill px-5 my-5 d-none d-md-block">
 							View Deals
-						</a>
+						</div>
 					</Link>
 				</div>
 				<div className="col-12 col-md-4 position-relative">
@@ -78,12 +75,11 @@ function Fibre() {
 					</div>
 				</div>
 				<div className="col-12 d-block d-md-none text-center">
-					<a
-						href="#"
-						className="btn btn-lg btn-callToAction rounded-pill px-5 my-5"
-					>
-						View Deals
-					</a>
+					<Link to="/fibre">
+						<div className="btn btn-lg btn-callToAction rounded-pill px-5 my-5">
+							View Deals
+						</div>
+					</Link>
 				</div>
 			</div>
 		</div>
