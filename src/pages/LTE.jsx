@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import SiteNav from "../Shared/navbar";
 import phone from "../images/kindpng_699290.png";
 import blob from "../images/blob.svg";
 import blob1 from "../images/blob(2).svg";
 import blob2 from "../images/blob(5).svg";
+import axios from "axios";
 
 const LTE = () => {
+	const [LTES, setLTES] = useState([]);
+
+	useEffect(() => {
+		getLTES();
+	}, []);
+
+	function getLTES() {
+		axios
+			.get("https://sbwl-admin.herokuapp.com/api/ltes")
+			.then((response) => {
+				setLTES(response.data.data);
+			})
+			.catch((err) => {
+				if (err) {
+					console.log("No LTES");
+				}
+			});
+	}
+
 	return (
 		<div
 			className="lte-section d-flex align-items-stretch flex-row row"
@@ -113,6 +133,26 @@ const LTE = () => {
 							</p>
 						</div>
 					</div>
+				</div>
+			</div>
+			{/* LTE services */}
+			<div className="col-12">
+				<div className="row">
+					{LTES.map((lte, index) => {
+						return (
+							<div className="col-12 col-md-2">
+								<div class="card text-center">
+									<div class="card-body">
+										<h5 class="card-title">{lte.attributes.Name}</h5>
+										<h6 class="card-subtitle mb-2 text-muted">
+											{lte.attributes.Description}
+										</h6>
+										<p class="card-text">R {lte.attributes.Price}</p>
+									</div>
+								</div>
+							</div>
+						);
+					})}
 				</div>
 			</div>
 		</div>
