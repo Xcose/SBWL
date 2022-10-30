@@ -1,21 +1,53 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import SiteNav from "../Shared/navbar";
 import phone from "../images/kindpng_699290.png";
 import blob from "../images/blob.svg";
 import blob1 from "../images/blob(2).svg";
 import blob2 from "../images/blob(5).svg";
 import axios from "axios";
+import Providers from "../Components/LTE/Providers";
+import Categories from "../Components/LTE/Categories";
+import Services from "../Components/LTE/Services";
 
 const LTE = () => {
 	const [LTES, setLTES] = useState([]);
+	const [categories, setCategories] = useState([]);
+	const [providers, setProviders] = useState([]);
+	let [provider, setProvider] = useState();
+	let [category, setCategory] = useState();
+	const isFirstRender = useRef(true);
 
 	useEffect(() => {
-		getLTES();
-	}, []);
+		if (isFirstRender.current) {
+			isFirstRender.current = false;
+			getLteProviders();
+			// getLTES();
+			return; // 👈️ return early if first render
+		}
+		getCategories();
+	}, [provider]);
+
+	useEffect(() => {
+		if (isFirstRender.current) {
+			isFirstRender.current = false;
+			return; // 👈️ return early if first render
+		}
+		if (category) {
+			getLTES();
+		} else {
+			console.log("Something is wrong");
+		}
+	}, [category]);
 
 	function getLTES() {
+		console.log(category);
 		axios
-			.get("https://sbwl-admin.herokuapp.com/api/ltes")
+			.get(
+				"/ltes?filters[lte_service_provider][Name][$eq]=" +
+					provider +
+					"&filters[lte_category][Name][$eq]=" +
+					category
+			)
 			.then((response) => {
 				setLTES(response.data.data);
 			})
@@ -24,6 +56,38 @@ const LTE = () => {
 					console.log("No LTES");
 				}
 			});
+	}
+	function getCategories() {
+		axios
+			.get(
+				"/lte-categories?filters[lte_service_providers][Name][$eq]=" + provider
+			)
+			.then((response) => {
+				setCategories(response.data.data);
+			})
+			.catch((err) => {
+				if (err) {
+					console.log("No Categories");
+				}
+			});
+	}
+	function getLteProviders() {
+		axios
+			.get("/lte-service-providers")
+			.then((response) => {
+				setProviders(response.data.data);
+			})
+			.catch((err) => {
+				if (err) {
+					console.log("No Providers");
+				}
+			});
+	}
+	function SelectProvider(selectedProvider) {
+		setProvider(selectedProvider);
+	}
+	function SelectCategory(selectedCategory) {
+		setCategory(selectedCategory);
 	}
 
 	return (
@@ -93,6 +157,7 @@ const LTE = () => {
 					</div>
 				</div>
 			</div>
+
 			<div className="col-12 col-md-6">
 				<div className="row position-relative top-50 start-50 translate-middle">
 					<div className="col-12 col-md-6 py-2">
@@ -135,25 +200,17 @@ const LTE = () => {
 					</div>
 				</div>
 			</div>
+			{/* providers */}
+			<div className="col-12">
+				<Providers providers={providers} SelectProvider={SelectProvider} />
+			</div>
+			{/* Categories selection */}
+			<div className="col-12">
+				<Categories categories={categories} SelectCategory={SelectCategory} />
+			</div>
 			{/* LTE services */}
 			<div className="col-12">
-				<div className="row">
-					{LTES.map((lte, index) => {
-						return (
-							<div className="col-12 col-md-2">
-								<div class="card text-center">
-									<div class="card-body">
-										<h5 class="card-title">{lte.attributes.Name}</h5>
-										<h6 class="card-subtitle mb-2 text-muted">
-											{lte.attributes.Description}
-										</h6>
-										<p class="card-text">R {lte.attributes.Price}</p>
-									</div>
-								</div>
-							</div>
-						);
-					})}
-				</div>
+				<Services ltes={LTES} />
 			</div>
 		</div>
 	);
