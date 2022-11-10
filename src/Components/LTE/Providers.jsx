@@ -6,29 +6,31 @@ const Providers = ({ providers, SelectProvider }) => {
 	}
 	return (
 		<React.Fragment>
-			<p className="fs-1 text-center">Please select a Network Proider</p>
-			<div class="row row-cols-1 row-cols-md-2 g-4">
-				{providers.map((provider, index) => {
-					return (
-						<div class="col">
-							<label className="w-100">
-								<input
-									type="radio"
-									name="category"
-									class="card-input-element d-none"
-									value={provider.attributes.Name}
-									id={index}
-									onChange={OnchangeHandle}
-								/>
-								<div class="card  text-center">
-									<div class="card-body">
-										<h5 class="card-title">{provider.attributes.Name}</h5>
+			<div className="d-flex flex-column h-100">
+				{/* <p className="fs-1 text-center">Please select a Network Proider</p> */}
+				<div class="row row-cols-1 row-cols-md-2 g-0 flex-grow-1">
+					{providers.map((provider, index) => {
+						return (
+							<div class="col bg-danger">
+								<label className="w-100 h-100">
+									<input
+										type="radio"
+										name="category"
+										class="card-input-element d-none h-100"
+										value={provider.attributes.Name}
+										id={index}
+										onChange={OnchangeHandle}
+									/>
+									<div class="card text-center h-100">
+										<div class="card-body d-flex align-items-center justify-content-center">
+											<h5 class="card-title">{provider.attributes.Name}</h5>
+										</div>
 									</div>
-								</div>
-							</label>
-						</div>
-					);
-				})}
+								</label>
+							</div>
+						);
+					})}
+				</div>
 			</div>
 		</React.Fragment>
 	);
