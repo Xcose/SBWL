@@ -1,18 +1,75 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import SiteNav from "../Shared/navbar";
 import phone from "../images/kindpng_699290.png";
 import blob from "../images/blob.svg";
 import blob1 from "../images/blob(2).svg";
 import blob2 from "../images/blob(5).svg";
+import axios from "axios";
+import Providers from "../Components/Fibre/Providers";
+import Services from "../Components/Fibre/Services";
 
 const Fibre = () => {
+	const [fibres, setFibres] = useState([]);
+	const [providers, setProviders] = useState([]);
+	let [provider, setProvider] = useState();
+	let [counter, setCounter] = useState(0);
+	const isFirstRender = useRef(true);
+
+	useEffect(() => {
+		if (isFirstRender.current) {
+			isFirstRender.current = false;
+			getFibreProviders();
+			return; // 👈️ return early if first render
+		}
+	}, [provider]);
+
+	function getFibres(selectedProvider) {
+		axios
+			.get(
+				"/fibres?populate=*&filters[fibre_service_providers][Name][$eq]=" +
+					selectedProvider
+			)
+			.then((response) => {
+				setFibres(response.data.data);
+			})
+			.catch((err) => {
+				if (err) {
+					console.log("no fibres");
+				}
+			});
+	}
+
+	function getFibreProviders() {
+		axios
+			.get("/fibre-service-providers")
+			.then((response) => {
+				setProviders(response.data.data);
+			})
+			.catch((err) => {
+				if (err) {
+					console.log("No Providers");
+				}
+			});
+	}
+
+	function SelectProvider(selectedProvider) {
+		getFibres(selectedProvider);
+		setProvider(selectedProvider);
+		setCounter(1);
+	}
+	function back() {
+		setCounter(counter - 1);
+	}
+
 	return (
 		<div
-			className="fibre-section d-flex align-items-stretch flex-row row"
+			className="fibre-section d-flex align-items-stretch flex-row row  m-0 g-0"
 			style={{ minHeight: "100vh" }}
 		>
-			{/* navigation bar */}
-			<SiteNav />
+			<div className="col-12">
+				{/* navigation bar */}
+				<SiteNav />
+			</div>
 			<div className="col-12 col-md-6 position-relative">
 				{/* Desktop */}
 				<div className="d-none d-md-block">
@@ -71,6 +128,21 @@ const Fibre = () => {
 							Connect using the ultra fast connection
 						</p>
 					</div>
+				</div>
+			</div>
+			<div className="col-12 col-md-6 d-flex flex-column m-0">
+				<div className="h-100 flex-grow-1">
+					{
+						{
+							0: (
+								<Providers
+									providers={providers}
+									SelectProvider={SelectProvider}
+								/>
+							),
+							1: <Services fibres={fibres} back={back} />,
+						}[counter]
+					}
 				</div>
 			</div>
 			<div className="col-12 col-md-6">

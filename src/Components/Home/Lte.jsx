@@ -1,8 +1,6 @@
 import React from "react";
 import oct from "../../images/Oct1.svg";
 import laptop from "../../images/kindpng_450792.png";
-import Openserve from "../../images/os.png";
-import Metro from "../../images/metrofibre-networx-logo-2.png";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
