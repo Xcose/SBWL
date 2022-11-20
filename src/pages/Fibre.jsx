@@ -145,44 +145,52 @@ const Fibre = () => {
 					}
 				</div>
 			</div>
-			<div className="col-12 col-md-6">
-				<div className="row position-relative top-50 start-50 translate-middle">
-					<div className="col-12 col-md-6 py-2">
-						<div className="bg-lte-text rounded-2 p-2 h-100">
-							<p className="sub-title">Month-to-Month (No Contract)</p>
-							<p>
-								News write-ups offer a great way to let clients know about new
-								products and services, events, awards, and more.
-							</p>
+			<div className="col-12 p-0 m-0 d-flex flex-column">
+				<div className="row position-relative top-50 start-50 translate-middle g-0 text-center flex-grow-1">
+					<div className="col-12 col-md-3">
+						<div className="p-2 h-100 d-flex align-items-center">
+							<div>
+								<p className="sub-title">Month-to-Month (No Contract)</p>
+								<p>
+									News write-ups offer a great way to let clients know about new
+									products and services, events, awards, and more.
+								</p>
+							</div>
 						</div>
 					</div>
-					<div className="col-12 col-md-6 py-2">
-						<div className="bg-lte-text rounded-2 p-2 h-100">
-							<p className="sub-title">One month role over</p>
-							<p>
-								News write-ups offer a great way to let clients know about new
-								products and services, events, awards, and more.
-							</p>
+					<div className="col-12 col-md-3">
+						<div className="p-2 h-100 d-flex align-items-center">
+							<div>
+								<p className="sub-title">One month role over</p>
+								<p>
+									News write-ups offer a great way to let clients know about new
+									products and services, events, awards, and more.
+								</p>
+							</div>
 						</div>
 					</div>
-					<div className="col-12 col-md-6 py-2">
-						<div className="bg-lte-text rounded-2 p-2 h-100">
-							<p className="sub-title">No out-of-bundle data</p>
-							<p>
-								News write-ups offer a great way to let clients know about new
-								products and services, events, awards, and more.
-							</p>
+					<div className="col-12 col-md-3">
+						<div className="p-2 h-100 d-flex align-items-center">
+							<div>
+								<p className="sub-title">No out-of-bundle data</p>
+								<p>
+									News write-ups offer a great way to let clients know about new
+									products and services, events, awards, and more.
+								</p>
+							</div>
 						</div>
 					</div>
-					<div className="col-12 col-md-6 py-2">
-						<div className="bg-lte-text rounded-2 p-2 h-100">
-							<p className="sub-title">
-								LTE ready, just insert simcard into device and you are ready
-							</p>
-							<p>
-								News write-ups offer a great way to let clients know about new
-								products and services, events, awards, and more.
-							</p>
+					<div className="col-12 col-md-3">
+						<div className="p-2 h-100 d-flex align-items-center">
+							<div>
+								<p className="sub-title">
+									LTE ready, just insert simcard into device and you are ready
+								</p>
+								<p>
+									News write-ups offer a great way to let clients know about new
+									products and services, events, awards, and more.
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
