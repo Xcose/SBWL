@@ -5,10 +5,11 @@ import Home from "./pages/Home";
 import LTE from "./pages/LTE";
 import Fibre from "./pages/Fibre";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Store from "./store";
 
 function App() {
 	return (
-		<React.Fragment>
+		<Store>
 			<Router>
 				<div className="container-fluid p-0 m-0">
 					<Routes>
@@ -19,7 +20,7 @@ function App() {
 					</Routes>
 				</div>
 			</Router>
-		</React.Fragment>
+		</Store>
 	);
 }
 
