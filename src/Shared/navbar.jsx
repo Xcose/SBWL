@@ -43,13 +43,14 @@ const SiteNav = () => {
 				<div className="collapse navbar-collapse" id="navbarNav">
 					<ul className="navbar-nav ms-auto">
 						<li className="nav-item">
-							<a
-								className="nav-link active btn btn-nav border-0 rounded-pill px-5"
-								aria-current="page"
-								href="#home"
-							>
-								SIGN IN
-							</a>
+							<Link to="/signup">
+								<span
+									className="nav-link active btn btn-nav border-0 rounded-pill px-5"
+									aria-current="page"
+								>
+									SIGN IN
+								</span>
+							</Link>
 						</li>
 					</ul>
 				</div>

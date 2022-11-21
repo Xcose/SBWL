@@ -4,6 +4,7 @@ import phone from "../../images/kindpng_699290.png";
 import blob from "../../images/blob.svg";
 import blob1 from "../../images/blob(2).svg";
 import blob2 from "../../images/blob(5).svg";
+import { Link } from "react-router-dom";
 
 function Hero() {
 	return (
@@ -43,12 +44,11 @@ function Hero() {
 						>
 							DATA
 						</p>
-						<a
-							href="#"
-							className="btn btn-lg btn-callToAction rounded-pill px-5"
-						>
-							SIGN UP
-						</a>
+						<Link to="/signup">
+							<span className="btn btn-lg btn-callToAction rounded-pill px-5 text-white">
+								SIGN UP
+							</span>
+						</Link>
 					</div>
 				</div>
 				<div className="col-12 col-md-6 h-100 position-relative d-none d-md-block">

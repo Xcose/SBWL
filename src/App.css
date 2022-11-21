@@ -27,7 +27,7 @@ body {
 }
 .btn-callToAction {
   background-color: #f44926 !important;
-  color: white !important;
+  /* color: white !important; */
 }
 .btn-nav {
   background-color: white !important;

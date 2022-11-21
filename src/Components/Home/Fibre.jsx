@@ -47,9 +47,9 @@ function Fibre() {
 						/>
 					</div>
 					<Link to="/fibre">
-						<div className="btn btn-lg btn-callToAction rounded-pill px-5 my-5 d-none d-md-block">
+						<span className="btn btn-lg btn-callToAction rounded-pill px-5 my-5 d-none d-md-block text-white">
 							View Deals
-						</div>
+						</span>
 					</Link>
 				</div>
 				<div className="col-12 col-md-4 position-relative">
