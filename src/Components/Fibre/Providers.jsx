@@ -8,7 +8,7 @@ const Providers = ({ providers, SelectProvider }) => {
 		<React.Fragment>
 			<div className="d-flex flex-column h-100">
 				{/* <p className="fs-1 text-center">Please select a Network Proider</p> */}
-				<div class="row row-cols-1 row-cols-md-3 g-0 flex-grow-1">
+				<div class="row row-cols-1 row-cols-md-3 g-2 flex-grow-1">
 					{providers.map((provider, index) => {
 						return (
 							<div class="col">

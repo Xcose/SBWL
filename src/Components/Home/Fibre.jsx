@@ -3,11 +3,20 @@ import oct from "../../images/Oct.svg";
 import Vuma from "../../images/vuma1.png";
 import Openserve from "../../images/os.png";
 import Metro from "../../images/metrofibre-networx-logo-2.png";
+import PowerLine from "../../images/NicePng_electricity-png_267873.png";
 import { Link } from "react-router-dom";
 
 function Fibre() {
 	return (
-		<div className="p-5" id="fibre" style={{ minHeight: "100vh" }}>
+		<div
+			className="p-5 position-relative"
+			id="fibre"
+			style={{ minHeight: "100vh" }}
+		>
+			<img
+				src={PowerLine}
+				className="w-100 position-absolute bottom-0 start-50 translate-middle-x m-0"
+			/>
 			<div className="row text-white p-5">
 				<div className="col-12">
 					<p className="display-1 title">Fibre</p>

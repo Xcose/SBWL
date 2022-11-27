@@ -13,7 +13,7 @@ const Categories = ({ categories, SelectCategory, back }) => {
 						style={{ fontSize: "2rem" }}
 					></i>
 				</span>
-				<div class="row row-cols-1 row-cols-md-2 g-0 flex-grow-1">
+				<div class="row row-cols-1 row-cols-md-2 g-2 flex-grow-1">
 					{categories.map((category, index) => {
 						return (
 							<div class="col">

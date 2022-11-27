@@ -1,14 +1,24 @@
 import React from "react";
 import oct from "../../images/Oct1.svg";
 import laptop from "../../images/kindpng_450792.png";
+import comsTower from "../../images/coms-tower.svg";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 function Lte() {
 	return (
-		<div className="p-5" id="lte" style={{ minHeight: "100vh" }}>
+		<div
+			className="p-5 position-relative"
+			id="lte"
+			style={{ minHeight: "100vh" }}
+		>
+			<img
+				src={comsTower}
+				style={{ zINdex: "1" }}
+				className="w-100 position-absolute bottom-0 start-50 translate-middle-x m-0"
+			/>
 			<div className="row text-white p-md-5">
-				<div className="col-12">
+				<div className="col-12" style={{ zIndex: "2" }}>
 					<div className="row">
 						<div className="col-12 col-md-4">
 							<p className="display-1 title">LTE</p>
