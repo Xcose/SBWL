@@ -10,6 +10,7 @@ import Categories from "../Components/LTE/Categories";
 import Services from "../Components/LTE/Services";
 import { Context } from "../store";
 import Loading from "../Shared/Loading";
+import comsTower from "../images/coms-tower.svg";
 
 const LTE = () => {
 	const [LTES, setLTES] = useState([]);
@@ -113,6 +114,11 @@ const LTE = () => {
 					className="lte-section d-flex align-items-stretch flex-row row m-0 g-0"
 					style={{ minHeight: "100vh" }}
 				>
+					<img
+						src={comsTower}
+						style={{ zINdex: "1" }}
+						className="w-100 position-absolute bottom-0 start-50 translate-middle-x m-0"
+					/>
 					<div className="col-12">
 						{/* navigation bar */}
 						<SiteNav />
@@ -205,7 +211,7 @@ const LTE = () => {
 								<div className="p-2 h-100 d-flex align-items-center">
 									<div>
 										<p className="sub-title">Month-to-Month (No Contract)</p>
-										<p>
+										<p className="text-white">
 											News write-ups offer a great way to let clients know about
 											new products and services, events, awards, and more.
 										</p>
@@ -216,7 +222,7 @@ const LTE = () => {
 								<div className="p-2 h-100 d-flex align-items-center">
 									<div>
 										<p className="sub-title">One month role over</p>
-										<p>
+										<p className="text-white">
 											News write-ups offer a great way to let clients know about
 											new products and services, events, awards, and more.
 										</p>
@@ -227,7 +233,7 @@ const LTE = () => {
 								<div className="p-2 h-100 d-flex align-items-center">
 									<div>
 										<p className="sub-title">No out-of-bundle data</p>
-										<p>
+										<p className="text-white">
 											News write-ups offer a great way to let clients know about
 											new products and services, events, awards, and more.
 										</p>
@@ -241,7 +247,7 @@ const LTE = () => {
 											LTE ready, just insert simcard into device and you are
 											ready
 										</p>
-										<p>
+										<p className="text-white">
 											News write-ups offer a great way to let clients know about
 											new products and services, events, awards, and more.
 										</p>

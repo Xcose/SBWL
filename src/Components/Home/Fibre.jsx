@@ -15,10 +15,11 @@ function Fibre() {
 		>
 			<img
 				src={PowerLine}
+				style={{ zINdex: "1" }}
 				className="w-100 position-absolute bottom-0 start-50 translate-middle-x m-0"
 			/>
-			<div className="row text-white p-5">
-				<div className="col-12">
+			<div className="row text-white p-5" style={{ zIndex: "2" }}>
+				<div className="col-12" style={{ zIndex: "2" }}>
 					<p className="display-1 title">Fibre</p>
 				</div>
 				{/* Desktop Version */}
@@ -28,7 +29,7 @@ function Fibre() {
 							<img
 								src={oct}
 								alt="..."
-								className="position-absolute top-50 start-50 translate-middle w-100"
+								className="position-absolute top-50 start-50 translate-middle w-100 neon"
 							/>
 							<img
 								src={Vuma}
@@ -37,7 +38,7 @@ function Fibre() {
 							/>
 						</div>
 						<div className=" d-block d-md-none">
-							<img src={oct} alt="..." className="" />
+							<img src={oct} alt="..." className="neon" />
 							<img
 								src={Vuma}
 								alt="..."
@@ -48,17 +49,17 @@ function Fibre() {
 				</div>
 				<div className="col-12 col-md-4 text-center position-relative">
 					<div className="position-relative">
-						<img src={oct} alt="..." className="w-100" />
+						<img src={oct} alt="..." className="w-100 neon" />
 						<img
 							src={Openserve}
 							alt="..."
 							className="position-absolute top-50 start-50 translate-middle w-100"
 						/>
 					</div>
-					<Link to="/fibre">
-						<span className="btn btn-lg btn-callToAction rounded-pill px-5 my-5 d-none d-md-block text-white">
+					<Link to="/fibre" className="d-none d-md-block">
+						<div className="btn btn-lg btn-callToAction rounded-pill px-5 my-5 text-white h-100">
 							View Deals
-						</span>
+						</div>
 					</Link>
 				</div>
 				<div className="col-12 col-md-4 position-relative">
@@ -66,7 +67,7 @@ function Fibre() {
 						<img
 							src={oct}
 							alt="..."
-							className="position-absolute top-50 start-50 translate-middle w-100"
+							className="position-absolute top-50 start-50 translate-middle w-100 neon"
 						/>
 						<img
 							src={Metro}
@@ -75,7 +76,7 @@ function Fibre() {
 						/>
 					</div>
 					<div className="d-block d-md-none">
-						<img src={oct} alt="..." className="" />
+						<img src={oct} alt="..." className="neon" />
 						<img
 							src={Metro}
 							alt="..."
@@ -83,9 +84,12 @@ function Fibre() {
 						/>
 					</div>
 				</div>
-				<div className="col-12 d-block d-md-none text-center">
+				<div
+					className="col-12 d-block d-md-none text-center"
+					style={{ zIndex: "2" }}
+				>
 					<Link to="/fibre">
-						<div className="btn btn-lg btn-callToAction rounded-pill px-5 my-5">
+						<div className="btn btn-lg btn-callToAction rounded-pill px-5 my-5 text-white">
 							View Deals
 						</div>
 					</Link>
