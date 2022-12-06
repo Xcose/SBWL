@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
 import SiteNav from "../Shared/navbar";
-import phone from "../images/kindpng_699290.png";
-import blob from "../images/blob.svg";
-import blob1 from "../images/blob(2).svg";
+import laptop from "../images/kindpng_450792.png";
+import blob from "../images/Oct1.svg";
 import blob2 from "../images/blob(5).svg";
 import axios from "axios";
 import Providers from "../Components/LTE/Providers";
@@ -29,7 +28,6 @@ const LTE = () => {
 			return; // 👈️ return early if first render
 		}
 		getCategories();
-		console.log(state.loading);
 	}, [provider]);
 
 	useEffect(() => {
@@ -74,6 +72,7 @@ const LTE = () => {
 				)
 				.then((response) => {
 					setCategories(response.data.data);
+					console.log(response.data);
 				});
 			setState({ loading: false });
 		} catch (error) {
@@ -111,41 +110,27 @@ const LTE = () => {
 		<React.Fragment>
 			{!state.loading ? (
 				<div
-					className="lte-section d-flex align-items-stretch flex-row row m-0 g-0"
+					className="lte-section d-flex align-items-stretch flex-row row m-0"
 					style={{ minHeight: "100vh" }}
 				>
-					<img
+					{/* <img
 						src={comsTower}
 						style={{ zINdex: "1" }}
 						className="w-100 position-absolute bottom-0 start-50 translate-middle-x m-0"
-					/>
+					/> */}
 					<div className="col-12">
 						{/* navigation bar */}
 						<SiteNav />
 					</div>
-					<div className="col-12 col-md-6 position-relative">
+					<div className="col-12 position-relative">
 						{/* Desktop */}
 						<div className="d-none d-md-block">
 							<div className="text-center h-100">
+								<img src={blob} alt="..." className=" w-25" />
 								<img
-									src={blob1}
+									src={laptop}
 									alt="..."
-									className="position-absolute top-50 start-50 translate-middle w-50"
-								/>
-								<img
-									src={blob}
-									alt="..."
-									className="position-absolute top-50 start-50 translate-middle w-50"
-								/>
-								<img
-									src={blob2}
-									alt="..."
-									className="position-absolute top-50 start-50 translate-middle w-50"
-								/>
-								<img
-									src={phone}
-									alt="..."
-									className="position-absolute top-50 start-50 translate-middle w-50"
+									className="position-absolute top-50 start-50 translate-middle w-25"
 								/>
 							</div>
 							<div className="position-absolute top-50 start-50 translate-middle text-center text-white w-100">
@@ -156,21 +141,11 @@ const LTE = () => {
 							</div>
 						</div>
 						{/* mobile */}
-						<div className="d-block d-md-none">
+						<div className="d-block d-md-none mt-5">
 							<div className="text-center h-100">
-								<img src={blob1} alt="..." className="w-50" />
+								<img src={blob} alt="..." className="w-50" />
 								<img
-									src={blob}
-									alt="..."
-									className="position-absolute top-50 start-50 translate-middle w-50"
-								/>
-								<img
-									src={blob2}
-									alt="..."
-									className="position-absolute top-50 start-50 translate-middle w-50"
-								/>
-								<img
-									src={phone}
+									src={laptop}
 									alt="..."
 									className="position-absolute top-50 start-50 translate-middle w-50"
 								/>
@@ -183,7 +158,7 @@ const LTE = () => {
 							</div>
 						</div>
 					</div>
-					<div className="col-12 col-md-6 d-flex flex-column m-0">
+					<div className="col-12 d-flex flex-column m-0">
 						<div className="h-100 flex-grow-1">
 							{
 								{

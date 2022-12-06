@@ -23,7 +23,7 @@ const SiteNav = () => {
 					isDark ? "bg-dark" : "bg-transparent"
 				} position-fixed w-100`}
 				id="siteNav"
-				style={{ zIndex: "10" }}
+				style={{ zIndex: "5" }}
 			>
 				<div className="container">
 					<Link to="/">

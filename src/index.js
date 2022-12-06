@@ -5,7 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import axios from "axios";
 
-axios.defaults.baseURL = "https://sbwl-admin.herokuapp.com/api/";
+axios.defaults.baseURL = "https://sbwladmin-production.up.railway.app/api/";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

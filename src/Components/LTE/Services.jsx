@@ -11,7 +11,7 @@ const Services = ({ ltes, back }) => {
 						style={{ fontSize: "2rem" }}
 					></i>
 				</span>
-				<div class="row row-cols-1 row-cols-md-3 g-2 flex-grow-1">
+				<div class="row row-cols-1 row-cols-md-5 justify-content-center g-2 flex-grow-1">
 					{ltes.map((lte, index) => {
 						return (
 							<div class="col">
