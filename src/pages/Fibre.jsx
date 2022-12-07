@@ -48,9 +48,11 @@ const Fibre = () => {
 	const getFibreProviders = async () => {
 		try {
 			setState({ loading: true });
-			await axios.get("/fibre-service-providers").then((response) => {
-				setProviders(response.data.data);
-			});
+			await axios
+				.get("/fibre-service-providers?populate=*")
+				.then((response) => {
+					setProviders(response.data.data);
+				});
 			setState({ loading: false });
 		} catch (error) {
 			if (error) {
@@ -72,36 +74,32 @@ const Fibre = () => {
 		<React.Fragment>
 			{!state.loading ? (
 				<div
-					className="fibre-section d-flex align-items-stretch flex-row row  m-0 g-0"
+					className="fibre-section d-flex align-items-stretch flex-row row m-0 g-0 p-2"
 					style={{ minHeight: "100vh" }}
 				>
 					<div className="col-12">
 						{/* navigation bar */}
 						<SiteNav />
 					</div>
-					<div className="col-12 col-md-6 position-relative">
+					<div className="col-12 position-relative">
 						{/* Desktop */}
 						<div className="d-none d-md-block">
 							<div className="text-center h-100">
-								<img
-									src={blob1}
-									alt="..."
-									className="position-absolute top-50 start-50 translate-middle w-50"
-								/>
+								<img src={blob1} alt="..." className="w-25" />
 								<img
 									src={blob}
 									alt="..."
-									className="position-absolute top-50 start-50 translate-middle w-50"
+									className="position-absolute top-50 start-50 translate-middle w-25"
 								/>
 								<img
 									src={blob2}
 									alt="..."
-									className="position-absolute top-50 start-50 translate-middle w-50"
+									className="position-absolute top-50 start-50 translate-middle w-25"
 								/>
 								<img
 									src={phone}
 									alt="..."
-									className="position-absolute top-50 start-50 translate-middle w-50"
+									className="position-absolute top-50 start-50 translate-middle w-25"
 								/>
 							</div>
 							<div className="position-absolute top-50 start-50 translate-middle text-center text-white w-100">
@@ -139,7 +137,7 @@ const Fibre = () => {
 							</div>
 						</div>
 					</div>
-					<div className="col-12 col-md-6 d-flex flex-column m-0">
+					<div className="col-12 d-flex flex-column m-0">
 						<div className="h-100 flex-grow-1">
 							{
 								{

@@ -110,7 +110,7 @@ const LTE = () => {
 		<React.Fragment>
 			{!state.loading ? (
 				<div
-					className="lte-section d-flex align-items-stretch flex-row row m-0"
+					className="lte-section d-flex align-items-stretch flex-row row m-0 p-2"
 					style={{ minHeight: "100vh" }}
 				>
 					{/* <img
